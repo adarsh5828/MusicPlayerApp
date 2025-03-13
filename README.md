@@ -1,0 +1,1 @@
+This Application makes us to Select a song form the list og song based on whatever genre you like(hip-hop,pop,and Rock,etc.) and allows you to plat a song. It also allows you to create a playlist for yourself and add songs into them based on completely your choice. 
