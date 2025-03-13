@@ -1,0 +1,131 @@
+body {
+ font-family:Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(232, 223, 232);
+  transition: background-color 0.3s, color 0.3s;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+h1{
+    text-align: center;
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+/* .theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #39baea;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 645px;
+}
+.all-songs, .song-card, .playlist-section {
+    background-color: skyblue;
+    width:30%;
+    padding: 1rem;
+}
+#createPlaylist{
+        background-color: #7e57c2;
+
+}
+
+h2,h3{
+    color:black;
+}
+ul{
+    list-style-type:none;
+    padding: 0; 
+}
+
+li{
+    padding: 0.5rem;
+    background-color: #4fc3f7;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+li:hover {
+    background-color: #0288d1;
+}
+
+.controls button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.controls button:hover {
+    background-color: #5e35b1;
+}
+
+body[data-theme='dark'] {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body[data-theme='dark'] header {
+    background-color: #1e1e1e;
+}
+body[data-theme='dark'] nav {
+    background-color: #1e1e1e;
+}
+
+body[data-theme='dark'] .all-songs, 
+body[data-theme='dark'] .song-card, 
+body[data-theme='dark'] .playlist-section {
+    background-color: #263238;
+}
+
+body[data-theme='dark'] li {
+    background-color: #37474f;
+}
+
+body[data-theme='dark'] li:hover {
+    background-color: #455a64;
+}
